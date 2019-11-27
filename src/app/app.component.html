@@ -10,25 +10,27 @@
 <!-- Toolbar -->
 <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
   <!--Home Button-->
-  <button mat-button href="/" fxFlex="10">
+  <button mat-button routerLink="/" fxFlex="10">
     <strong>New Reddit</strong>
   </button>
   <!--Subreddits-->
-  <button mat-button href="/" fxFlex="20">Subreddits</button>
+  <button mat-button routerLink="/" fxFlex="20">Subreddits</button>
   <!--Search-->
   <mat-form-field class="searchbar" fxFlex="30 58 58" fxFlexOffset="1">
     <input matInput type="search">
     <mat-placeholder class="placeholder">Search New Reddit</mat-placeholder>
   </mat-form-field>
   <!--Create Post Button-->
-  <button mat-button href="/" fxFlex="1">
+  <button mat-button routerLink="/" fxFlex="1">
     <mat-icon>add_box</mat-icon>
   </button>
   <!--Profile Button-->
-  <button mat-button href="/profile" fxFlex="10">My Profile</button>
+  <button mat-button routerLink="/profile" fxFlex="10">My Profile</button>
 </mat-toolbar>
 
 <div class="content" role="main">
+  <!--Ide jönnek majd a routerből a cumók-->
+  <router-outlet></router-outlet>
   <img src="https://i.redd.it/nb2tfijjwov01.gif">
   <reddit-post></reddit-post>
   <reddit-user></reddit-user>

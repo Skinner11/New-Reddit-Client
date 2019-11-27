@@ -9,6 +9,7 @@ import { MatToolbarModule, MatIconModule, MatButtonModule, MatInputModule } from
 import { RedditPostComponent } from './reddit-post/reddit-post.component';
 import { RedditCommentComponent } from './reddit-comment/reddit-comment.component';
 import { RedditUserComponent } from './reddit-user/reddit-user.component';
+import { RoutingModule } from './routing/routing.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { RedditUserComponent } from './reddit-user/reddit-user.component';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
