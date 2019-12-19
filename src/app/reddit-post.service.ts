@@ -13,6 +13,7 @@ export class RedditPostService {
   constructor(private http: HttpClient) { }
 
   getPosts(): Promise<Post[]> {
+    console.log("ELMONDTAM");
     return this.http.get<Post[]>(`${this.postUrl}`, httpOptions).toPromise();
   }
 

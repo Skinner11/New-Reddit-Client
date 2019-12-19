@@ -4,12 +4,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { RedditUserComponent } from "../reddit-user/reddit-user.component"
 import { RedditCommentComponent } from "../reddit-comment/reddit-comment.component"
 import { RedditPostListComponent } from "../reddit-post-list/reddit-post-list.component"
+import { PostDetailComponent } from '../post-detail/post-detail.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/',
+    redirectTo: '/posts',
     pathMatch: 'full'
+  },
+  {
+    path: 'posts',    
+    component: RedditPostListComponent
   },
   {
     path: 'users/register',
@@ -19,6 +24,10 @@ const routes: Routes = [
     path: 'users/:id',
     component: RedditUserComponent
   },
+  {
+    path: 'posts/:id',
+    component: PostDetailComponent
+  }
 ];
 
 

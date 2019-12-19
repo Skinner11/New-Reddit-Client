@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Post} from "../post";
+import {Comment} from "../comment"
+import {RedditPostService} from "../reddit-post.service"
 
 @Component({
   selector: 'reddit-post-list',
@@ -12,9 +14,13 @@ export class RedditPostListComponent implements OnInit {
 
   private posts: Post[] = []; 
 
-  constructor() { }
+  constructor(
+    private postService: RedditPostService
+  ) { }
 
-  ngOnInit() {
+  async ngOnInit(): Promise<void> {
+    //TODO Filterelni az aktuális felhasználónak szánt posztokat
+    this.posts = await this.postService.getPosts();
   }
 
 }

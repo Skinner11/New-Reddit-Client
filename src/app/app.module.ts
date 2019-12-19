@@ -1,6 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,13 +13,15 @@ import { RedditPostListComponent } from './reddit-post-list/reddit-post-list.com
 import { RedditCommentComponent } from './reddit-comment/reddit-comment.component';
 import { RedditUserComponent } from './reddit-user/reddit-user.component';
 import { RoutingModule } from './routing/routing.module';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RedditPostListComponent,
     RedditCommentComponent,
-    RedditUserComponent,    
+    RedditUserComponent,
+    PostDetailComponent,    
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,8 @@ import { RoutingModule } from './routing/routing.module';
     MatIconModule,
     MatButtonModule,
     MatInputModule,
-    RoutingModule
+    RoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
