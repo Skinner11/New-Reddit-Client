@@ -3,5 +3,5 @@ export class Comment {
     public post_id: number
     public user_id: number
     public text: string
-    votes: number
+    public votes: number
 }
