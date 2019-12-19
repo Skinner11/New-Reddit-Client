@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule, MatIconModule, MatButtonModule, MatInputModule } from '@angular/material';
-import { RedditPostComponent } from './reddit-post/reddit-post.component';
+import { RedditPostListComponent } from './reddit-post-list/reddit-post-list.component';
 import { RedditCommentComponent } from './reddit-comment/reddit-comment.component';
 import { RedditUserComponent } from './reddit-user/reddit-user.component';
 import { RoutingModule } from './routing/routing.module';
@@ -14,7 +14,7 @@ import { RoutingModule } from './routing/routing.module';
 @NgModule({
   declarations: [
     AppComponent,
-    RedditPostComponent,
+    RedditPostListComponent,
     RedditCommentComponent,
     RedditUserComponent,    
   ],

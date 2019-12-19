@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RedditPostComponent } from './reddit-post.component';
+import { RedditPostListComponent } from './reddit-post-list.component';
 
 describe('RedditPostComponent', () => {
-  let component: RedditPostComponent;
-  let fixture: ComponentFixture<RedditPostComponent>;
+  let component: RedditPostListComponent;
+  let fixture: ComponentFixture<RedditPostListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RedditPostComponent ]
+      declarations: [ RedditPostListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RedditPostComponent);
+    fixture = TestBed.createComponent(RedditPostListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

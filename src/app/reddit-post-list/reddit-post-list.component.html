@@ -1,0 +1,14 @@
+<div class="list-group">
+    <div *ngFor="let post of posts" fxLayout="row" fxLayoutAlign="space-between center">
+        <div color="secondary">
+            <button mat-button>
+                <mat-icon>arrow_upward</mat-icon>
+            </button>
+            <h1>69</h1>
+            <button mat-button>
+                <mat-icon>arrow_downward</mat-icon>
+            </button>
+        </div>
+        <p>{{ post.content }}</p>
+    </div>
+</div>

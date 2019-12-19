@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { RedditUserComponent } from "../reddit-user/reddit-user.component"
 import { RedditCommentComponent } from "../reddit-comment/reddit-comment.component"
-import { RedditPostComponent } from "../reddit-post/reddit-post.component"
+import { RedditPostListComponent } from "../reddit-post-list/reddit-post-list.component"
 
 const routes: Routes = [
   {
