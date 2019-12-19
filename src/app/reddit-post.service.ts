@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Post } from "./post";
+import { Comment } from "./comment";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AuthService, httpOptions } from './auth.service';
 
@@ -31,5 +32,12 @@ export class RedditPostService {
     return this.http.get<Post[]>(`${this.postUrl}/+'subreddits'+/${subredditid}`, httpOptions).toPromise();
   }
 
+  getCommentsForPost(postid: number): Promise<Comment[]> {
+    return this.http.get<Comment[]>(`${this.postUrl}/${postid}+'/comments'`, httpOptions).toPromise();
+  }
+
+  createCommentUnderPost(postid: number, comment: Comment): Promise<Comment> {
+    return this.http.post<Comment>(`${this.postUrl}/${postid}+'/comments'`,httpOptions).toPromise();
+  }
 
 }
