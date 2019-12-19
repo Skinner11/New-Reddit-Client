@@ -5,6 +5,7 @@ import { RedditUserComponent } from "../reddit-user/reddit-user.component"
 import { RedditCommentComponent } from "../reddit-comment/reddit-comment.component"
 import { RedditPostListComponent } from "../reddit-post-list/reddit-post-list.component"
 import { PostDetailComponent } from '../post-detail/post-detail.component';
+import {LoginFormComponent} from '../login-form/login-form.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'posts/:id',
     component: PostDetailComponent
+  },
+  {
+    path: 'login',
+    component: LoginFormComponent
   }
 ];
 

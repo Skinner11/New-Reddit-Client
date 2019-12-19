@@ -8,12 +8,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule, MatIconModule, MatButtonModule, MatInputModule } from '@angular/material';
+import { MatToolbarModule, MatIconModule, MatButtonModule, MatInputModule, MatFormFieldModule } from '@angular/material';
 import { RedditPostListComponent } from './reddit-post-list/reddit-post-list.component';
 import { RedditCommentComponent } from './reddit-comment/reddit-comment.component';
 import { RedditUserComponent } from './reddit-user/reddit-user.component';
 import { RoutingModule } from './routing/routing.module';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -21,9 +22,11 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
     RedditPostListComponent,
     RedditCommentComponent,
     RedditUserComponent,
-    PostDetailComponent,    
+    PostDetailComponent,
+    LoginFormComponent,    
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     FlexLayoutModule,
     AppRoutingModule,
@@ -32,6 +35,7 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
     MatIconModule,
     MatButtonModule,
     MatInputModule,
+    MatFormFieldModule,
     RoutingModule,
     HttpClientModule
   ],

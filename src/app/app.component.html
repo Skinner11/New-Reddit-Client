@@ -1,12 +1,3 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
 <!-- Toolbar -->
 <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
   <!--Home Button-->
@@ -24,22 +15,12 @@
   <button mat-button routerLink="/" fxFlex="1">
     <mat-icon>add_box</mat-icon>
   </button>
-  <!--Profile Button-->
-  <button mat-button routerLink="/profile" fxFlex="10">My Profile</button>
+  <!--Profile Button and logout-->
+  <div *ngIf="authService.isLoggedIn" fxFlex="10">
+    <button mat-button>My Profile</button>
+    <button mat-button (click)="logout()">Logout</button>
+  </div>
+  <div *ngIf="!authService.isLoggedIn" fxFlex="10">      
+      <button mat-button routerLink="/login">Login</button>
+    </div>
 </mat-toolbar>
-
-<div class="content" role="main">
-  <!--Ide jönnek majd a routerből a cumók-->  
-</div>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
-
-<router-outlet></router-outlet>
