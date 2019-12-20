@@ -15,4 +15,7 @@ export class AppComponent {
   {
     this.authService.logout();
   }
+  login(){
+    console.log("éjfél után mondok egy imát, talán eljön hozzám az új szívidomár :^)))))");
+  }
 }

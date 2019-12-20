@@ -6,6 +6,7 @@ import { RedditCommentComponent } from "../reddit-comment/reddit-comment.compone
 import { RedditPostListComponent } from "../reddit-post-list/reddit-post-list.component"
 import { PostDetailComponent } from '../post-detail/post-detail.component';
 import {LoginFormComponent} from '../login-form/login-form.component';
+import { AuthGuard } from '../auth-guard';
 
 const routes: Routes = [
   {

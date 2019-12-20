@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Validators, FormBuilder } from '@angular/forms';
 
 @Component({
-  selector: 'app-login-form',
+  selector: 'login-form',
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.css']
 })
@@ -13,13 +13,13 @@ export class LoginFormComponent implements OnInit {
   message: string;
   hidePassword = true;
 
-  form = this.fb.group({
+  loginForm = this.fb.group({
     username: ['', [ Validators.required ]],
     password: ['', [ Validators.required ]],
   });
 
-  get username() { return this.form.get('username'); }
-  get password() { return this.form.get('password'); }
+  get username() { return this.loginForm.get('username'); }
+  get password() { return this.loginForm.get('password'); }
 
   constructor(
     private authService: AuthService,
@@ -28,6 +28,7 @@ export class LoginFormComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    
   }
 
   async onSubmit() {
