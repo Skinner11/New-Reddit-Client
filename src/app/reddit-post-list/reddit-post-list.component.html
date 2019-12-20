@@ -11,7 +11,7 @@
         </div>        
         <div>
             <h2>{{ post.title }}</h2>
-            <p *ngIf="post.content!=''">{{ post.content }}</p>
+            <p *ngIf="post.content!='' && post.content!=null">{{ post.content }}</p>
             <img *ngIf="post.pic!=''" [src]="_DomSanitizationService.bypassSecurityTrustUrl('localhost:8080/api'+post.pic)" width="200" height="100"/>
         </div>
         <a [routerLink]="['/posts', post.id]">"View comments"</a>

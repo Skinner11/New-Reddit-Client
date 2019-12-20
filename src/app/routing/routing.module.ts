@@ -16,7 +16,7 @@ const routes: Routes = [
   },
   {
     path: 'posts',    
-    component: RedditPostListComponent
+    component: RedditPostListComponent    
   },
   {
     path: 'users/register',

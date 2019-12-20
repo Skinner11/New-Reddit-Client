@@ -12,13 +12,13 @@
         </div>
         <div>
             <h2>{{ post.title }}</h2>
-            <p *ngIf="post.content!=''">{{ post.content }}</p>
+            <p *ngIf="post.content!='' && post.content!=null">{{ post.content }}</p>
             <img *ngIf="post.pic!=''"
                 [src]="_DomSanitizationService.bypassSecurityTrustUrl('localhost:8080/api'+post.pic)" width="200"
                 height="100" />
         </div>
     </div>
-    
+
     <h1>Comments:</h1>
     <!--Poszthoz tartozó kommentek-->
     <div *ngFor="let comment of comments" fxLayout="row" fxLayoutAlign="space-between center">
