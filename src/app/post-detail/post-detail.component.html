@@ -12,6 +12,16 @@
 </div>
 
 <div *ngFor="let comment of comments" fxLayout="row" fxLayoutAlign="space-between center">
+    <div color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+        <div color="secondary">
+            <button mat-button>
+                <mat-icon>arrow_upward</mat-icon>
+            </button>
+            <h1>{{ comment.votes }}</h1>
+            <button mat-button>
+                <mat-icon>arrow_downward</mat-icon>
+            </button>
+        </div>
         <p>{{ comment.text }}</p>
+    </div>
 </div>
-

@@ -33,11 +33,11 @@ export class RedditPostService {
   }
 
   getCommentsForPost(postid: number): Promise<Comment[]> {
-    return this.http.get<Comment[]>(`${this.postUrl}/${postid}+'/comments'`, httpOptions).toPromise();
+    return this.http.get<Comment[]>(`${this.postUrl}/${postid}/comments`, httpOptions).toPromise();
   }
 
   createCommentUnderPost(postid: number, comment: Comment): Promise<Comment> {
-    return this.http.post<Comment>(`${this.postUrl}/${postid}+'/comments'`,httpOptions).toPromise();
+    return this.http.post<Comment>(`${this.postUrl}/${postid}/comments`,httpOptions).toPromise();
   }
 
 }
