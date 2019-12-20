@@ -43,4 +43,15 @@ export class AuthService {
     this.isLoggedIn = false;
     this.user = null;
   }
+
+  public async getCurrentUser(): Promise<User> {
+    try {
+      const user = await this.http.post<User>(`${this.authUrl}/me`, {}, httpOptions).toPromise();
+    if(user!=null)
+      return Promise.resolve(user);
+    } catch(e) {
+      console.log(e);
+      return Promise.reject();
+    }    
+  }
 }

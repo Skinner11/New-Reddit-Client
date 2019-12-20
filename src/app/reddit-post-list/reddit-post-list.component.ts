@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Post} from "../post";
 import {Comment} from "../comment"
 import {RedditPostService} from "../reddit-post.service"
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'reddit-post-list',
@@ -15,6 +16,7 @@ export class RedditPostListComponent implements OnInit {
   private posts: Post[] = []; 
 
   constructor(
+    public _DomSanitizationService: DomSanitizer,
     private postService: RedditPostService
   ) { }
 

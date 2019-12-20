@@ -1,16 +1,19 @@
-<div class="list-group">
+<div class="list-group" fxLayout="column" fxLayoutAlign="center center">
     <div *ngFor="let post of posts" fxLayout="row" fxLayoutAlign="space-between center">
-        <div color="secondary">
+        <div color="secondary" fxLayout="column" fxLayoutAlign="center center">
             <button mat-button>
                 <mat-icon>arrow_upward</mat-icon>
-            </button>
-            <h1>69</h1>
+            </button>            
+            <h1>{{ post.votes }}</h1>            
             <button mat-button>
                 <mat-icon>arrow_downward</mat-icon>
             </button>
+        </div>        
+        <div>
+            <h2>{{ post.title }}</h2>
+            <p *ngIf="post.content!=''">{{ post.content }}</p>
+            <img *ngIf="post.pic!=''" [src]="_DomSanitizationService.bypassSecurityTrustUrl('localhost:8080/api'+post.pic)"/>
         </div>
-        <p>{{ post.content }}</p>
         <a [routerLink]="['/posts', post.id]">"View comments"</a>
     </div>
 </div>
-

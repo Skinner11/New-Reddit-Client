@@ -14,6 +14,7 @@ import { RedditUserComponent } from './reddit-user/reddit-user.component';
 import { RoutingModule } from './routing/routing.module';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { CommentFormComponent } from './comment-form/comment-form.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LoginFormComponent } from './login-form/login-form.component';
     RedditCommentComponent,
     RedditUserComponent,
     PostDetailComponent,
-    LoginFormComponent,    
+    LoginFormComponent,
+    CommentFormComponent,    
   ],
   imports: [
     FormsModule,
