@@ -1,17 +1,24 @@
 <div class="list-group" fxLayout="column" fxLayoutAlign="center center">
     <!--Poszt-->
     <div fxLayout="row" fxLayoutAlign="space-between center">
-        <div color="secondary">
+        <div color="secondary" fxLayout="column" fxLayoutAlign="center center">
             <button mat-button>
                 <mat-icon>arrow_upward</mat-icon>
             </button>
-            <h1>{{post.votes}}</h1>
+            <h1>{{ post.votes }}</h1>
             <button mat-button>
                 <mat-icon>arrow_downward</mat-icon>
             </button>
         </div>
-        <p>{{ post.content }}</p>
+        <div>
+            <h2>{{ post.title }}</h2>
+            <p *ngIf="post.content!=''">{{ post.content }}</p>
+            <img *ngIf="post.pic!=''"
+                [src]="_DomSanitizationService.bypassSecurityTrustUrl('localhost:8080/api'+post.pic)" width="200"
+                height="100" />
+        </div>
     </div>
+    
     <h1>Comments:</h1>
     <!--Poszthoz tartozó kommentek-->
     <div *ngFor="let comment of comments" fxLayout="row" fxLayoutAlign="space-between center">

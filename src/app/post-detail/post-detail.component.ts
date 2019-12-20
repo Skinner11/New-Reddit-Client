@@ -3,6 +3,7 @@ import { Post} from '../post';
 import { Comment} from '../comment';
 import {RedditPostService} from '../reddit-post.service';
 import { ActivatedRoute } from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-post-detail',
@@ -16,6 +17,7 @@ export class PostDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    public _DomSanitizationService: DomSanitizer,
     private postService: RedditPostService
   ) { }
 
